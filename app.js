@@ -5,7 +5,7 @@ const path = require('path')
 /*引入express
 * */
 const app = express();
-const port = process.env.PORT || 3333;
+const port = 3333;
 
 
 
