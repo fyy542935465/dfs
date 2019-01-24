@@ -1,10 +1,27 @@
 const express = require('express');
+const swig = require('swig');
+const path = require('path')
 
 /*引入express
 * */
 const app = express();
 const port = process.env.PORT || 3333;
 
+
+
+//设置swig页面不缓存
+swig.setDefaults({
+  cache: false
+})
+
+
+/*设置静态目录
+* swig
+* */
+app.set('view cache',false);
+app.set('views','./assets/views/pages/');
+app.set('view engine','html');
+app.engine('html',swig.renderFile);
 
 //静态文件目录，
 app.use('/img',express.static('./img'));//将文件设置成静态
@@ -13,9 +30,7 @@ app.use('/img',express.static('./img'));//将文件设置成静态
 *设置404
 * */
 app.get('*',(req,res) => {
-    res.render('404',{
-        content:'页面跑丢了'
-    })
+    res.send('404')
 })
 
 

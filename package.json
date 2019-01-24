@@ -1,14 +1,19 @@
 {
-  "name": "img-server",
+  "name": "expresspro",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "express": "^4.16.4"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.16.4",
+    "swig": "^1.4.2"
   }
 }
