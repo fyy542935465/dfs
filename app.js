@@ -7,7 +7,7 @@ const port = process.env.PORT || 3333;
 
 
 //静态文件目录，
-app.use('/public',express.static('../../img/group1'));//将文件设置成静态
+app.use('/img',express.static('./img'));//将文件设置成静态
 
 
 /* start server
