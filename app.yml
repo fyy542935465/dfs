@@ -1,5 +1,5 @@
 apps:
-  - name : "app2"
+  - name : "dfs"
     script : "app.js"
     # watch : true
     log_file : "../pm2Log/full-loan.log"
