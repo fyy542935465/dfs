@@ -7,8 +7,8 @@ const util = require('./util')
 * */
 const app = express();
 const port = 3825;
-const server = require('http').Server(app)
-const io = require('socket.io')(server)
+// const server = require('http').Server(app)
+// const io = require('socket.io')(server)
 
 
 //设置swig页面不缓存
@@ -42,7 +42,7 @@ app.get('/',(req,res) => {
 /* start server
 * { port }
 * */
-server.listen(port,err => {
+app.listen(port,err => {
     if(err){
         console.log(err)
         return;
